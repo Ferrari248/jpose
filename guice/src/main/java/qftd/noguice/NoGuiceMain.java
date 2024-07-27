@@ -1,18 +1,18 @@
 package qftd.noguice;
 
-import qftd.common.entity.device.HuaweiPhone;
-import qftd.common.entity.device.Iphone;
+import qftd.common.entity.device.phone.HuaweiPhone;
+import qftd.common.entity.device.phone.XiaomiPhone;
 import qftd.common.entity.person.Student;
 
 public class NoGuiceMain {
     public static void main(String[] args) {
         Student zhangsan = new Student(1L, "zhangsan");
-        zhangsan.setDevice(new Iphone());
+        zhangsan.setPhone(new XiaomiPhone());
 
         Student lisi = new Student(2L, "lisi");
-        lisi.setDevice(new HuaweiPhone());
+        lisi.setPhone(new HuaweiPhone());
 
-        zhangsan.getDevice().turnOn();
-        lisi.getDevice().turnOn();
+        zhangsan.getPhone().turnOn();
+        lisi.getPhone().turnOn();
     }
 }
